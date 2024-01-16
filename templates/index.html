@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action='/process' method='post'>
+            <div class="form-group">
+                <label for='name'>Your Name:</label>
+                <input type='text' class="form-control" name='name'>
+            </div>
+            <div class="form-group">
+                <label for='dojo'>Dojo Location</label>
+                <select name="dojo" id="dojo">
+                    <option value="New York">New York</option>
+                    <option value="Minneapolis">Minneapolis</option>
+                    <option value="San Diego">San Diego</option>
+                    <option value="Denver">Denver</option>
+                    </select>
+            </div>
+            <label for='favorite_lang'>Favorite Language:</label>
+            <input type='text' class="form-control" name='favorite_lang'>
+            <label for='comment'>Comment (optional):</label>
+            <input type='text' class="form-control" name='comment'>
+
+            <input type='submit' value='Submit'>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
